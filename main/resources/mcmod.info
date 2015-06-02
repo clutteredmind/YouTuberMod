@@ -1,0 +1,17 @@
+[
+    {
+        "modid": "mod_YouTuberMod",
+        "name": "YouTuberMod",
+        "description": "A mod with my favorite YouTubers and some friends!",
+        "version": "1.0",
+        "credits": "Created by AmberThePeng and ClutteredMind",
+        "logoFile": "",
+        "mcversion": "",
+        "url": "",
+        "updateUrl": "",
+        "authors": [ "AmberThePeng", "ClutteredMind" ],
+        "parent":"",
+        "screenshots": [],
+        "dependencies": []
+    }
+]
