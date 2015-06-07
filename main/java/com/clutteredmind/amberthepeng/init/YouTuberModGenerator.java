@@ -6,8 +6,8 @@ import com.clutteredmind.amberthepeng.worldgenerator.WorldGenerator;
 
 public class YouTuberModGenerator
 {
-	public static void register()
-	{
-		GameRegistry.registerWorldGenerator(new WorldGenerator(), 1);
-	}
+   public static void register ()
+   {
+      GameRegistry.registerWorldGenerator (new WorldGenerator (), 1);
+   }
 }

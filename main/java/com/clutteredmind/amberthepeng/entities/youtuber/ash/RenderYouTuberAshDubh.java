@@ -1,19 +1,19 @@
-package com.clutteredmind.amberthepeng.entities.youtuber.stampy;
+package com.clutteredmind.amberthepeng.entities.youtuber.ash;
+
+import com.clutteredmind.amberthepeng.entities.turtle.EntityTurtle;
+import com.clutteredmind.amberthepeng.entities.youtuber.RenderYouTuber;
 
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
 
-import com.clutteredmind.amberthepeng.entities.turtle.EntityTurtle;
-import com.clutteredmind.amberthepeng.entities.youtuber.RenderYouTuber;
-
-public class RenderYouTuberStampy extends RenderYouTuber
+public class RenderYouTuberAshDubh extends RenderYouTuber
 {
    private static final ResourceLocation youTuberTexture = new ResourceLocation (
-         "mod_youtubermod:textures/entity/stampyskin.png");
+         "mod_youtubermod:textures/entity/ashdubhskin.png");
 
-   public RenderYouTuberStampy (RenderManager renderManager, ModelBase model, float shadowSize)
+   public RenderYouTuberAshDubh (RenderManager renderManager, ModelBase model, float shadowSize)
    {
       super (renderManager, model, shadowSize);
    }

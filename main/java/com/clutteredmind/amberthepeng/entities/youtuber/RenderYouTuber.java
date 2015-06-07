@@ -10,22 +10,14 @@ import net.minecraft.util.ResourceLocation;
 
 public class RenderYouTuber extends RenderLiving
 {
-	private static ResourceLocation youTuberTexture;
+   public RenderYouTuber (RenderManager renderManager, ModelBase model, float shadowSize)
+   {
+      super (renderManager, model, shadowSize);
+   }
 
-	public RenderYouTuber(ResourceLocation resourceLocation, RenderManager renderManager, ModelBase model, float shadowSize)
-	{
-		super(renderManager, model, shadowSize);
-		this.youTuberTexture = resourceLocation;
-	}
-
-	protected ResourceLocation func_180572_a(EntityYouTuber entity)
-	{
-		return youTuberTexture;
-	}
-	
-	@Override
-	protected ResourceLocation getEntityTexture(Entity entity)
-	{
-		return this.func_180572_a((EntityYouTuber)entity);
-	}
+   @Override
+   protected ResourceLocation getEntityTexture (Entity entity)
+   {
+      return null;
+   }
 }

@@ -9,8 +9,8 @@ import com.google.common.base.Predicates;
 
 public class EntityYouTuberStampy extends EntityYouTuber
 {
-	public EntityYouTuberStampy(World worldIn)
-	{
-		super(worldIn);
-	}
+   public EntityYouTuberStampy (World worldIn)
+   {
+      super (worldIn);
+   }
 }

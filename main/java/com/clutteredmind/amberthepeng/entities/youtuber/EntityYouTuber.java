@@ -5,8 +5,8 @@ import net.minecraft.world.World;
 
 public class EntityYouTuber extends EntityMob
 {
-	public EntityYouTuber(World worldIn)
-	{
-		super(worldIn);
-	}	
+   public EntityYouTuber (World worldIn)
+   {
+      super (worldIn);
+   }
 }

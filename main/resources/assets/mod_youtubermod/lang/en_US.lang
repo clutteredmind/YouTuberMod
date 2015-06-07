@@ -2,6 +2,12 @@ tile.youtuberore.name=YouTuber Ore
 
 entity.turtle.name=Turtle
 entity.stampy.name=Stampy
+entity.ash.name=AshDubh
+entity.dantdm.name=DanTDM
+entity.furiousdestroyer.name=FuriousDestroyer
+entity.squid.name=iBallisticSquid
+entity.stripe.name=StripeTheDog
+entity.supergirlygamer.name=SuperGirlyGamer
 
 item.youtubelogofragment.name=YouTube Logo Fragment
 item.rawturtlemeat.name=Raw Turtle Meat

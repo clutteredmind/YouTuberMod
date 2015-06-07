@@ -1,4 +1,4 @@
-package com.clutteredmind.amberthepeng.entities.youtuber.stampy;
+package com.clutteredmind.amberthepeng.entities.youtuber.squid;
 
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.renderer.entity.RenderManager;
@@ -8,12 +8,12 @@ import net.minecraft.util.ResourceLocation;
 import com.clutteredmind.amberthepeng.entities.turtle.EntityTurtle;
 import com.clutteredmind.amberthepeng.entities.youtuber.RenderYouTuber;
 
-public class RenderYouTuberStampy extends RenderYouTuber
+public class RenderYouTuberSquid extends RenderYouTuber
 {
    private static final ResourceLocation youTuberTexture = new ResourceLocation (
-         "mod_youtubermod:textures/entity/stampyskin.png");
+         "mod_youtubermod:textures/entity/iballisticsquidskin.png");
 
-   public RenderYouTuberStampy (RenderManager renderManager, ModelBase model, float shadowSize)
+   public RenderYouTuberSquid (RenderManager renderManager, ModelBase model, float shadowSize)
    {
       super (renderManager, model, shadowSize);
    }

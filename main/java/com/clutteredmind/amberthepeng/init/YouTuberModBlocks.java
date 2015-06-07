@@ -12,21 +12,29 @@ import com.clutteredmind.amberthepeng.housekeeping.Reference;
 
 public class YouTuberModBlocks
 {
-	public static Block youTuberOreBlock;
-	
-	public static void init()
-	{
-		youTuberOreBlock = new YouTuberOre(Material.rock).setUnlocalizedName("youtuberore");
-	}
-	
-	public static void register()
-	{
-		GameRegistry.registerBlock(youTuberOreBlock, youTuberOreBlock.getUnlocalizedName().substring(5));
-	}
-	
-	public static void registerRenders()
-	{
-		Item item = Item.getItemFromBlock(youTuberOreBlock);
-		Minecraft.getMinecraft().getRenderItem().getItemModelMesher().register(item, 0, new ModelResourceLocation(Reference.MOD_ID + ":" + item.getUnlocalizedName().substring(5), "inventory"));
-	}
+   public static Block youTuberOreBlock;
+
+   public static void init ()
+   {
+      youTuberOreBlock = new YouTuberOre (Material.rock).setUnlocalizedName ("youtuberore");
+   }
+
+   public static void register ()
+   {
+      GameRegistry.registerBlock (youTuberOreBlock, youTuberOreBlock.getUnlocalizedName ().substring (5));
+   }
+
+   public static void registerRenders ()
+   {
+      Item item = Item.getItemFromBlock (youTuberOreBlock);
+      Minecraft
+            .getMinecraft ()
+            .getRenderItem ()
+            .getItemModelMesher ()
+            .register (
+                  item,
+                  0,
+                  new ModelResourceLocation (Reference.MOD_ID + ":" + item.getUnlocalizedName ().substring (5),
+                        "inventory"));
+   }
 }

@@ -8,21 +8,22 @@ import net.minecraft.util.ResourceLocation;
 
 public class RenderTurtle extends RenderLiving
 {
-	private static final ResourceLocation turtleTexture = new ResourceLocation("mod_youtubermod:textures/entity/turtle.png");
-	
-	public RenderTurtle(RenderManager renderManager, ModelBase model, float shadowSize)
-	{
-		super(renderManager, model, shadowSize);
-	}
-	
-	protected ResourceLocation func_180572_a(EntityTurtle entity)
-	{
-		return turtleTexture;
-	}
-	
-	@Override
-	protected ResourceLocation getEntityTexture(Entity entity)
-	{
-		return this.func_180572_a((EntityTurtle)entity);
-	}
+   private static final ResourceLocation turtleTexture = new ResourceLocation (
+         "mod_youtubermod:textures/entity/turtle.png");
+
+   public RenderTurtle (RenderManager renderManager, ModelBase model, float shadowSize)
+   {
+      super (renderManager, model, shadowSize);
+   }
+
+   protected ResourceLocation func_180572_a (EntityTurtle entity)
+   {
+      return turtleTexture;
+   }
+
+   @Override
+   protected ResourceLocation getEntityTexture (Entity entity)
+   {
+      return this.func_180572_a ((EntityTurtle) entity);
+   }
 }
