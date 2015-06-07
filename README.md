@@ -15,4 +15,9 @@ Turtles!
 
 YouTubers!
 ![YouTubers](http://www.clutteredmind.com/github/YouTuberMod-youtubers.png "YouTubers")
-The Steve-skinned model is StripeTheDog. I haven't found a good skin for him yet.
+
+AmberThePeng playing with ideas for spawn structures!
+![AmberThePeng's World](http://www.clutteredmind.com/github/YouTuberMod-amberthepengsworld.png "AmberThePeng's World")
+
+AmberThePeng and her turtle!
+![Amber and a turt](http://www.clutteredmind.com/github/YouTuberMod-amberandaturt.png "Amber and a turt")
