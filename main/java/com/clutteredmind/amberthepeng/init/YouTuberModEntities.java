@@ -3,7 +3,6 @@ package com.clutteredmind.amberthepeng.init;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.model.ModelPlayer;
 import net.minecraft.entity.EnumCreatureType;
-import net.minecraft.util.ResourceLocation;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraftforge.fml.client.registry.RenderingRegistry;
 import net.minecraftforge.fml.common.registry.EntityRegistry;
@@ -11,6 +10,8 @@ import net.minecraftforge.fml.common.registry.EntityRegistry;
 import com.clutteredmind.amberthepeng.entities.turtle.EntityTurtle;
 import com.clutteredmind.amberthepeng.entities.turtle.ModelTurtle;
 import com.clutteredmind.amberthepeng.entities.turtle.RenderTurtle;
+import com.clutteredmind.amberthepeng.entities.youtuber.amylee33.EntityYouTuberAmyLee33;
+import com.clutteredmind.amberthepeng.entities.youtuber.amylee33.RenderYouTuberAmyLee33;
 import com.clutteredmind.amberthepeng.entities.youtuber.ash.EntityYouTuberAshDubh;
 import com.clutteredmind.amberthepeng.entities.youtuber.ash.RenderYouTuberAshDubh;
 import com.clutteredmind.amberthepeng.entities.youtuber.dantdm.EntityYouTuberDanTdm;
@@ -25,32 +26,37 @@ import com.clutteredmind.amberthepeng.entities.youtuber.stripe.EntityYouTuberStr
 import com.clutteredmind.amberthepeng.entities.youtuber.stripe.RenderYouTuberStripe;
 import com.clutteredmind.amberthepeng.entities.youtuber.supergirlygamer.EntityYouTuberSuperGirlyGamer;
 import com.clutteredmind.amberthepeng.entities.youtuber.supergirlygamer.RenderYouTuberSuperGirlyGamer;
+import com.clutteredmind.amberthepeng.housekeeping.Reference;
 
 public class YouTuberModEntities
 {
    public static void register ()
    {
       int entityId = EntityRegistry.findGlobalUniqueEntityId ();
-      EntityRegistry.registerGlobalEntityID (EntityTurtle.class, "turtle", entityId, 210528, 65280);
+      EntityRegistry.registerGlobalEntityID (EntityTurtle.class, "turtle", entityId, 0x33660, 0x00ff00);
       EntityRegistry.addSpawn (EntityTurtle.class, 40, 1, 5, EnumCreatureType.CREATURE, BiomeGenBase.beach);
 
-      // TODO: fix egg colors for YouTubers
       entityId = EntityRegistry.findGlobalUniqueEntityId ();
-      EntityRegistry.registerGlobalEntityID (EntityYouTuberAshDubh.class, "ash", entityId, 190528, 45280);
+      EntityRegistry.registerGlobalEntityID (EntityYouTuberAshDubh.class, "ash", entityId, 0xf2d622, 0xe9f507);
       entityId = EntityRegistry.findGlobalUniqueEntityId ();
-      EntityRegistry.registerGlobalEntityID (EntityYouTuberDanTdm.class, "dantdm", entityId, 190528, 45280);
+      EntityRegistry.registerGlobalEntityID (EntityYouTuberDanTdm.class, "dantdm", entityId, 0x404ad6,
+            Reference.Colors.Black);
       entityId = EntityRegistry.findGlobalUniqueEntityId ();
       EntityRegistry.registerGlobalEntityID (EntityYouTuberFuriousDestroyer.class, "furiousdestroyer", entityId,
-            190528, 45280);
+            0x666770, Reference.Colors.Black);
       entityId = EntityRegistry.findGlobalUniqueEntityId ();
-      EntityRegistry.registerGlobalEntityID (EntityYouTuberSquid.class, "squid", entityId, 190528, 45280);
+      EntityRegistry.registerGlobalEntityID (EntityYouTuberSquid.class, "squid", entityId, 0x527cde, 0x0c3aa6);
       entityId = EntityRegistry.findGlobalUniqueEntityId ();
-      EntityRegistry.registerGlobalEntityID (EntityYouTuberStampy.class, "stampy", entityId, 190528, 45280);
+      EntityRegistry.registerGlobalEntityID (EntityYouTuberStampy.class, "stampy", entityId, 0xff8800,
+            Reference.Colors.White);
       entityId = EntityRegistry.findGlobalUniqueEntityId ();
-      EntityRegistry.registerGlobalEntityID (EntityYouTuberStripe.class, "stripe", entityId, 190528, 45280);
+      EntityRegistry.registerGlobalEntityID (EntityYouTuberStripe.class, "stripe", entityId, Reference.Colors.Blue,
+            Reference.Colors.White);
       entityId = EntityRegistry.findGlobalUniqueEntityId ();
-      EntityRegistry.registerGlobalEntityID (EntityYouTuberSuperGirlyGamer.class, "supergirlygamer", entityId, 190528,
-            45280);
+      EntityRegistry.registerGlobalEntityID (EntityYouTuberSuperGirlyGamer.class, "supergirlygamer", entityId,
+            0xff9cfc, 0xff00a6);
+      entityId = EntityRegistry.findGlobalUniqueEntityId ();
+      EntityRegistry.registerGlobalEntityID (EntityYouTuberAmyLee33.class, "amylee33", entityId, 0xff9cfc, 0x9c2271);
    }
 
    public static void registerRenders ()
@@ -73,6 +79,8 @@ public class YouTuberModEntities
       RenderingRegistry.registerEntityRenderingHandler (EntityYouTuberSuperGirlyGamer.class,
             new RenderYouTuberSuperGirlyGamer (Minecraft.getMinecraft ().getRenderManager (), new ModelPlayer (0.0f,
                   true), 0.5F));
+      RenderingRegistry.registerEntityRenderingHandler (EntityYouTuberAmyLee33.class, new RenderYouTuberAmyLee33 (
+            Minecraft.getMinecraft ().getRenderManager (), new ModelPlayer (0.0f, true), 0.5F));
 
    }
 }

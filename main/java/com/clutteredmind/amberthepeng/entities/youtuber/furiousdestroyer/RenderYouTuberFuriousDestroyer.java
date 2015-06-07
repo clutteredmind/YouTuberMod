@@ -18,11 +18,6 @@ public class RenderYouTuberFuriousDestroyer extends RenderYouTuber
       super (renderManager, model, shadowSize);
    }
 
-   protected ResourceLocation func_180572_a (EntityTurtle entity)
-   {
-      return youTuberTexture;
-   }
-
    @Override
    protected ResourceLocation getEntityTexture (Entity entity)
    {

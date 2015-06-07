@@ -16,14 +16,9 @@ public class RenderTurtle extends RenderLiving
       super (renderManager, model, shadowSize);
    }
 
-   protected ResourceLocation func_180572_a (EntityTurtle entity)
-   {
-      return turtleTexture;
-   }
-
    @Override
    protected ResourceLocation getEntityTexture (Entity entity)
    {
-      return this.func_180572_a ((EntityTurtle) entity);
+      return turtleTexture;
    }
 }

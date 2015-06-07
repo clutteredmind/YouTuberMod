@@ -8,7 +8,7 @@ public class ClientProxy
 {
    public void registerRenders ()
    {
-      // TODO: register all renders here
+      // register all renders here
       YouTuberModEntities.registerRenders ();
       YouTuberModBlocks.registerRenders ();
       YouTuberModItems.registerRenders ();

@@ -8,16 +8,10 @@ import net.minecraft.client.renderer.entity.RenderManager;
 import net.minecraft.entity.Entity;
 import net.minecraft.util.ResourceLocation;
 
-public class RenderYouTuber extends RenderLiving
+public abstract class RenderYouTuber extends RenderLiving
 {
    public RenderYouTuber (RenderManager renderManager, ModelBase model, float shadowSize)
    {
       super (renderManager, model, shadowSize);
-   }
-
-   @Override
-   protected ResourceLocation getEntityTexture (Entity entity)
-   {
-      return null;
    }
 }
