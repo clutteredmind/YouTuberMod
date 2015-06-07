@@ -47,10 +47,11 @@ public class YouTuberOre extends Block
    @Override
    public int getExpDrop (net.minecraft.world.IBlockAccess world, BlockPos pos, int fortune)
    {
+      int xpAmount = 0;
       if (this.getItemDropped (world.getBlockState (pos), RANDOM, fortune) != Item.getItemFromBlock (this))
       {
-         return 1 + RANDOM.nextInt (5);
+         xpAmount = 1 + RANDOM.nextInt (5);
       }
-      return 0;
+      return xpAmount;
    }
 }

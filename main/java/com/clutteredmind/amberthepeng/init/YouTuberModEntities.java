@@ -63,24 +63,26 @@ public class YouTuberModEntities
    {
       RenderingRegistry.registerEntityRenderingHandler (EntityTurtle.class, new RenderTurtle (Minecraft.getMinecraft ()
             .getRenderManager (), new ModelTurtle (), 0.5F));
+      // NOTE: the "false" passed to the ModelPlayer constructor forces the game
+      // to use the Steve model as opposed to the Alex model
       RenderingRegistry.registerEntityRenderingHandler (EntityYouTuberAshDubh.class, new RenderYouTuberAshDubh (
-            Minecraft.getMinecraft ().getRenderManager (), new ModelPlayer (0.0f, true), 0.5F));
+            Minecraft.getMinecraft ().getRenderManager (), new ModelPlayer (0.0f, false), 0.5F));
       RenderingRegistry.registerEntityRenderingHandler (EntityYouTuberDanTdm.class, new RenderYouTuberDanTdm (Minecraft
-            .getMinecraft ().getRenderManager (), new ModelPlayer (0.0f, true), 0.5F));
+            .getMinecraft ().getRenderManager (), new ModelPlayer (0.0f, false), 0.5F));
       RenderingRegistry.registerEntityRenderingHandler (EntityYouTuberFuriousDestroyer.class,
             new RenderYouTuberFuriousDestroyer (Minecraft.getMinecraft ().getRenderManager (), new ModelPlayer (0.0f,
-                  true), 0.5F));
+                  false), 0.5F));
       RenderingRegistry.registerEntityRenderingHandler (EntityYouTuberSquid.class, new RenderYouTuberSquid (Minecraft
-            .getMinecraft ().getRenderManager (), new ModelPlayer (0.0f, true), 0.5F));
+            .getMinecraft ().getRenderManager (), new ModelPlayer (0.0f, false), 0.5F));
       RenderingRegistry.registerEntityRenderingHandler (EntityYouTuberStampy.class, new RenderYouTuberStampy (Minecraft
-            .getMinecraft ().getRenderManager (), new ModelPlayer (0.0f, true), 0.5F));
+            .getMinecraft ().getRenderManager (), new ModelPlayer (0.0f, false), 0.5F));
       RenderingRegistry.registerEntityRenderingHandler (EntityYouTuberStripe.class, new RenderYouTuberStripe (Minecraft
-            .getMinecraft ().getRenderManager (), new ModelPlayer (0.0f, true), 0.5F));
+            .getMinecraft ().getRenderManager (), new ModelPlayer (0.0f, false), 0.5F));
       RenderingRegistry.registerEntityRenderingHandler (EntityYouTuberSuperGirlyGamer.class,
             new RenderYouTuberSuperGirlyGamer (Minecraft.getMinecraft ().getRenderManager (), new ModelPlayer (0.0f,
-                  true), 0.5F));
+                  false), 0.5F));
       RenderingRegistry.registerEntityRenderingHandler (EntityYouTuberAmyLee33.class, new RenderYouTuberAmyLee33 (
-            Minecraft.getMinecraft ().getRenderManager (), new ModelPlayer (0.0f, true), 0.5F));
+            Minecraft.getMinecraft ().getRenderManager (), new ModelPlayer (0.0f, false), 0.5F));
 
    }
 }
