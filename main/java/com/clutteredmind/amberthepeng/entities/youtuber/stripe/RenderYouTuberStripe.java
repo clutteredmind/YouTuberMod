@@ -12,7 +12,7 @@ public class RenderYouTuberStripe extends RenderYouTuber
 {
    // TODO: get a real skin for Stripe
    private static final ResourceLocation youTuberTexture = new ResourceLocation (
-         "mod_youtubermod:textures/entity/steveskin.png");
+         "mod_youtubermod:textures/entity/stripethedogskin.png");
 
    public RenderYouTuberStripe (RenderManager renderManager, ModelBase model, float shadowSize)
    {
