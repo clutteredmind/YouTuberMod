@@ -3,15 +3,11 @@
         "modid": "mod_YouTuberMod",
         "name": "YouTuberMod",
         "description": "A mod with my favorite YouTubers, some friends, and turtles!",
-        "version": "1.0",
-        "credits": "Created by AmberThePeng and ClutteredMind. Turtles are courtesy of the Kevin M modding tutorials on YouTube.",
-        "logoFile": "",
-        "mcversion": "",
-        "url": "",
+        "version": "0.1",
+        "credits": "AmberThePeng and ClutteredMind. Turtles by Kevin M.",
+        "mcversion": "1.8",
+        "url": "https://github.com/clutteredmind/YouTuberMod",
         "updateUrl": "",
-        "authors": [ "AmberThePeng", "ClutteredMind" ],
-        "parent":"",
-        "screenshots": [],
-        "dependencies": []
+        "authors": [ "AmberThePeng", "ClutteredMind" ]
     }
 ]
