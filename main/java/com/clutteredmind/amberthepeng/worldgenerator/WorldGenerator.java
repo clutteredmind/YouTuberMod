@@ -39,7 +39,7 @@ public class WorldGenerator implements IWorldGenerator
 
    private void GenerateOverworld (World world, int i, int j, Random random)
    {
-      addOre (YouTuberModBlocks.youTuberOreBlock, Blocks.stone, random, world, i, j, 5, 12, 4, 8, 40);
+      addOre (YouTuberModBlocks.youTuberOreBlock, Blocks.stone, random, world, i, j, 5, 12, 2, 4, 3);
    }
 
    private void GenerateNether (World world, int i, int j, Random random)
