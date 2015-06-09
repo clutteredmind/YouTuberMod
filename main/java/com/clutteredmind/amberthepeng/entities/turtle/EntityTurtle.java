@@ -207,7 +207,7 @@ public class EntityTurtle extends EntityAnimal
 
                      double yDiff = MathHelper.floor_double (this.posY) - MathHelper.floor_double (this.entity.posY);
 
-                     if (yDiff == 1.0F & blockAboveSelf == Blocks.air && destBlock != Blocks.water && destDistance <= 3)
+                     if (yDiff == 1.0F && blockAboveSelf == Blocks.air && destBlock != Blocks.water && destDistance <= 3)
                      {
                         this.entity.motionX = dirX / destDistance * 0.3d;
                         this.entity.motionY = 0.4d;
