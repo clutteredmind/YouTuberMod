@@ -79,19 +79,19 @@ public class YouTuberModEntities
       // TODO: pick colors for player eggs
       entityId = EntityRegistry.findGlobalUniqueEntityId ();
       EntityRegistry.registerGlobalEntityID (EntityPlayerAmberThePeng.class, "amberthepeng", entityId,
-            Reference.Colors.Black, Reference.Colors.White);
+            Reference.Colors.Black, Reference.Colors.Red);
 
       entityId = EntityRegistry.findGlobalUniqueEntityId ();
       EntityRegistry.registerGlobalEntityID (EntityPlayerClutteredMind.class, "clutteredmind", entityId,
-            Reference.Colors.Black, Reference.Colors.White);
+            Reference.Colors.Blue, 0x4697e8);
 
       entityId = EntityRegistry.findGlobalUniqueEntityId ();
       EntityRegistry.registerGlobalEntityID (EntityPlayerILuvPiggys04.class, "iluvpiggys04", entityId,
-            Reference.Colors.Black, Reference.Colors.White);
+            0x29b2c4, 0xeda4d1);
 
       entityId = EntityRegistry.findGlobalUniqueEntityId ();
       EntityRegistry.registerGlobalEntityID (EntityPlayerMolyBDendum.class, "molybdendum", entityId,
-            Reference.Colors.Black, Reference.Colors.White);
+            Reference.Colors.Red, 0xfaec50);
    }
 
    public static void registerRenders ()
