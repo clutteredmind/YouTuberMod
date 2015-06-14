@@ -76,7 +76,6 @@ public class YouTuberModEntities
       EntityRegistry.registerGlobalEntityID (EntityYouTuberAmyLee33.class, "amylee33", entityId, 0xff9cfc, 0x9c2271);
 
       // players
-      // TODO: pick colors for player eggs
       entityId = EntityRegistry.findGlobalUniqueEntityId ();
       EntityRegistry.registerGlobalEntityID (EntityPlayerAmberThePeng.class, "amberthepeng", entityId,
             Reference.Colors.Black, Reference.Colors.Red);
