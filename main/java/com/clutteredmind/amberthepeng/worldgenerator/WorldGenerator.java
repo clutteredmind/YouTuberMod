@@ -7,6 +7,7 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
 import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
+import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.IChunkProvider;
 import net.minecraft.world.gen.feature.WorldGenMinable;
 import net.minecraftforge.fml.common.IWorldGenerator;
@@ -37,9 +38,13 @@ public class WorldGenerator implements IWorldGenerator
    {
    }
 
-   private void GenerateOverworld (World world, int i, int j, Random random)
+   private void GenerateOverworld (World world, int blockX, int blockZ, Random random)
    {
-      addOre (YouTuberModBlocks.youTuberOreBlock, Blocks.stone, random, world, i, j, 5, 12, 2, 4, 3);
+      // add in YouTuber ore
+      addOre (YouTuberModBlocks.youTuberOreBlock, Blocks.stone, random, world, blockX, blockZ, 5, 12, 2, 4, 3);
+
+      // add YouTuber structure
+      addYouTuberStructure (random, world, blockX, blockZ);
    }
 
    private void GenerateNether (World world, int i, int j, Random random)
@@ -61,6 +66,45 @@ public class WorldGenerator implements IWorldGenerator
          BlockPos blockPos = new BlockPos (xPos, yPos, zPos);
 
          new WorldGenMinable (state, maxVeinSize).generate (world, random, blockPos);
+      }
+   }
+   
+   // calculates whether or not a new YouTuber structure should be generated
+   private void addYouTuberStructure (Random random, World world, int blockX, int blockZ)
+   {
+      // get the current biome
+      BiomeGenBase biome = world.getBiomeGenForCoords (new BlockPos (blockX, 0, blockZ));
+      // add the structure if the biome is right and the random check passes
+      if (random.nextInt (192) == 0 && (biome.biomeName == "Plains" || biome.biomeName == "Savanna" || biome.biomeName == "Desert"
+            || biome.biomeName == "Plains"))
+      {
+         // TODO: figure out how to make this into a structure that is actually useful
+         int blockY = world.getTopSolidOrLiquidBlock (new BlockPos (blockX, 0, blockZ)).getY () - 1;
+         world.setBlockState (new BlockPos (blockX, blockY, blockZ), Blocks.wool.getDefaultState ());
+         world.setBlockState (new BlockPos (blockX - 1, blockY, blockZ), Blocks.wool.getDefaultState ());
+         world.setBlockState (new BlockPos (blockX - 2, blockY, blockZ), Blocks.wool.getDefaultState ());
+         world.setBlockState (new BlockPos (blockX + 1, blockY, blockZ), Blocks.wool.getDefaultState ());
+         world.setBlockState (new BlockPos (blockX + 2, blockY, blockZ), Blocks.wool.getDefaultState ());
+         world.setBlockState (new BlockPos (blockX, blockY, blockZ - 1), Blocks.wool.getDefaultState ());
+         world.setBlockState (new BlockPos (blockX, blockY, blockZ - 2), Blocks.wool.getDefaultState ());
+         world.setBlockState (new BlockPos (blockX, blockY, blockZ + 1), Blocks.wool.getDefaultState ());
+         world.setBlockState (new BlockPos (blockX, blockY, blockZ + 2), Blocks.wool.getDefaultState ());
+         world.setBlockState (new BlockPos (blockX - 1, blockY, blockZ - 1), Blocks.wool.getDefaultState ());
+         world.setBlockState (new BlockPos (blockX - 1, blockY, blockZ - 2), Blocks.wool.getDefaultState ());
+         world.setBlockState (new BlockPos (blockX - 1, blockY, blockZ + 1), Blocks.wool.getDefaultState ());
+         world.setBlockState (new BlockPos (blockX - 1, blockY, blockZ + 2), Blocks.wool.getDefaultState ());
+         world.setBlockState (new BlockPos (blockX - 2, blockY, blockZ - 1), Blocks.wool.getDefaultState ());
+         world.setBlockState (new BlockPos (blockX - 2, blockY, blockZ - 2), Blocks.wool.getDefaultState ());
+         world.setBlockState (new BlockPos (blockX - 2, blockY, blockZ + 1), Blocks.wool.getDefaultState ());
+         world.setBlockState (new BlockPos (blockX - 2, blockY, blockZ + 2), Blocks.wool.getDefaultState ());
+         world.setBlockState (new BlockPos (blockX + 1, blockY, blockZ - 1), Blocks.wool.getDefaultState ());
+         world.setBlockState (new BlockPos (blockX + 1, blockY, blockZ - 2), Blocks.wool.getDefaultState ());
+         world.setBlockState (new BlockPos (blockX + 1, blockY, blockZ + 1), Blocks.wool.getDefaultState ());
+         world.setBlockState (new BlockPos (blockX + 1, blockY, blockZ + 2), Blocks.wool.getDefaultState ());
+         world.setBlockState (new BlockPos (blockX + 2, blockY, blockZ - 1), Blocks.wool.getDefaultState ());
+         world.setBlockState (new BlockPos (blockX + 2, blockY, blockZ - 2), Blocks.wool.getDefaultState ());
+         world.setBlockState (new BlockPos (blockX + 2, blockY, blockZ + 1), Blocks.wool.getDefaultState ());
+         world.setBlockState (new BlockPos (blockX + 2, blockY, blockZ + 2), Blocks.wool.getDefaultState ());
       }
    }
 }
