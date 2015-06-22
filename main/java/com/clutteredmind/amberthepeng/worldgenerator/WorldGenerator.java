@@ -3,8 +3,10 @@ package com.clutteredmind.amberthepeng.worldgenerator;
 import java.util.Random;
 
 import net.minecraft.block.Block;
+import net.minecraft.block.BlockColored;
 import net.minecraft.block.state.IBlockState;
 import net.minecraft.init.Blocks;
+import net.minecraft.item.EnumDyeColor;
 import net.minecraft.util.BlockPos;
 import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
@@ -75,13 +77,14 @@ public class WorldGenerator implements IWorldGenerator
       // get the current biome
       BiomeGenBase biome = world.getBiomeGenForCoords (new BlockPos (blockX, 0, blockZ));
       // add the structure if the biome is right and the random check passes
+      // TODO: the structure is spawning too often, that needs to be fixed
       if (random.nextInt (192) == 0 && (biome.biomeName == "Plains" || biome.biomeName == "Savanna" || biome.biomeName == "Desert"
             || biome.biomeName == "Plains"))
       {
          // TODO: figure out how to make this into a structure that is actually useful
          int blockY = world.getTopSolidOrLiquidBlock (new BlockPos (blockX, 0, blockZ)).getY () - 1;
          world.setBlockState (new BlockPos (blockX, blockY, blockZ), Blocks.wool.getDefaultState ());
-         world.setBlockState (new BlockPos (blockX - 1, blockY, blockZ), Blocks.wool.getDefaultState ());
+         world.setBlockState (new BlockPos (blockX - 1, blockY, blockZ), Blocks.wool.getDefaultState ().withProperty (BlockColored.COLOR, EnumDyeColor.BLACK));
          world.setBlockState (new BlockPos (blockX - 2, blockY, blockZ), Blocks.wool.getDefaultState ());
          world.setBlockState (new BlockPos (blockX + 1, blockY, blockZ), Blocks.wool.getDefaultState ());
          world.setBlockState (new BlockPos (blockX + 2, blockY, blockZ), Blocks.wool.getDefaultState ());
